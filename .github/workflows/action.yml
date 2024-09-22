@@ -9,4 +9,4 @@ jobs:
             with:
                 repository: 'bepass-org/oblivion-desktop'
                 latest: true
-                fileName: 'oblivion_desktop.zip'
+                fileName: '*'
