@@ -9,3 +9,14 @@ name: Downloader
     # A flag to set the download target as latest release
     # The default value is 'false'
     latest: true
+name: Deploy Workflow
+on: [push, workflow_dispatch]
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: Downloader
+            uses: robinraju/release-downloader@v1
+            with:
+                repository: 'bepass-org/oblivion-desktop/releases'
+                latest: true
