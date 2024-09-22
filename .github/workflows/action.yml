@@ -20,4 +20,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: سرورهای رایگان جمع آوری شده
-          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/*
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/oblivion-desktop-linux-aarch64.rpm,/home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/oblivion-desktop-linux-amd64.deb
