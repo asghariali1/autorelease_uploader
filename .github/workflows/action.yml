@@ -14,3 +14,4 @@ jobs:
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
+            working-directory: ./downloaded
