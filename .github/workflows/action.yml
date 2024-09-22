@@ -7,5 +7,6 @@ jobs:
         -   name: Downloader
             uses: robinraju/release-downloader@v1
             with:
-                repository: 'bepass-org/oblivion-desktop/releases'
+                repository: 'bepass-org/oblivion-desktop'
                 latest: true
+                fileName: 'oblivion_desktop.zip'
