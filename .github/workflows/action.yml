@@ -10,3 +10,4 @@ jobs:
                 repository: 'bepass-org/oblivion-desktop'
                 latest: true
                 fileName: '*'
+                out-file-path: '/downloaded/'
