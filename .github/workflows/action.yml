@@ -14,8 +14,10 @@ jobs:
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
-      -   name: Upload logs
-          uses: actions/upload-artifact@v4
-          with:
-            name: my-artifact
-            path: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded
+      -  name: send created sub
+         uses: appleboy/telegram-action@master
+         with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: سرورهای رایگان جمع آوری شده
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/*
