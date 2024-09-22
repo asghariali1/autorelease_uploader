@@ -1,6 +1,5 @@
 - name: release-downloader
 uses: robinraju/release-downloader@v1.11
-- uses: robinraju/release-downloader@v1
   with:
     repository: 'bepass-org/oblivion-desktop/releases'
     latest: true
