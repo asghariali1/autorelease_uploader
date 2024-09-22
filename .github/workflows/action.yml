@@ -13,4 +13,4 @@ jobs:
                 out-file-path: 'downloaded'
 defaults:
  run:
-  working-directory: "assets"
+  working-directory: /assets/
