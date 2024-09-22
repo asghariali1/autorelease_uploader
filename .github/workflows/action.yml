@@ -1,3 +1,4 @@
+name: Downloader
 - uses: robinraju/release-downloader@v1
   with:
     # The source repository path.
