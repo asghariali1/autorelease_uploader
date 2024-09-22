@@ -14,4 +14,9 @@ jobs:
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
-            
+      -   name: Upload logs
+          uses: actions/upload-artifact@v2
+          with:
+            name: retrieve
+            path: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/*
+            retention-days: 5
