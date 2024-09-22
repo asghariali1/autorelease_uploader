@@ -11,3 +11,6 @@ jobs:
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
+defaults:
+ run:
+  working-directory: "assets"
