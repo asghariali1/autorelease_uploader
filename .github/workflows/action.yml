@@ -39,11 +39,41 @@ jobs:
                 token: ${{ secrets.TELEGRAM_TOKEN }}
                 message: به روزترین نسخه‌های هیدیفای
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Android-arm64.apk
+      -   name: send hiddify2
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Android-arm7.apk
+      -   name: send hiddify3
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
+                document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Linux-x64.AppImage.apk
+      -   name: send hiddify4
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Android-x86_64.apk
-                document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Linux-x64.AppImage
+      -   name: send hiddify5
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Portable-x64.zip
+      -   name: send hiddify6
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Setup-x64.exe
+      -   name: send hiddify7
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Setup-x64.msix
       -   name: Mahsa_Downloader
           uses: robinraju/release-downloader@v1
@@ -59,7 +89,22 @@ jobs:
                 token: ${{ secrets.TELEGRAM_TOKEN }}
                 message: به روزترین نسخه‌های مهسا ان جی
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_arm64-v8a.apk
+      -   name: send Mahsa
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_armeabi-v7a.apk
+      -   name: send Mahsa
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_x86.apk
+      -   name: send Mahsa
+          uses: appleboy/telegram-action@master
+          with:
+                to: ${{ secrets.TELEGRAM_TO }}
+                token: ${{ secrets.TELEGRAM_TOKEN }}
                 document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_x86_64.apk
 
