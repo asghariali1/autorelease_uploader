@@ -8,10 +8,11 @@ jobs:
           working-directory: /assets/
         steps:
         -   name: Downloader
+            working-directory: ./downloaded
             uses: robinraju/release-downloader@v1
             with:
                 repository: 'bepass-org/oblivion-desktop'
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
-            working-directory: ./downloaded
+            
