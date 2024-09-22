@@ -1,5 +1,10 @@
 name: Deploy Workflow
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 */5 * * '
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -7,18 +12,55 @@ jobs:
       run:
         working-directory: ./app
     steps:
-      -   name: Downloader
+      -   name: OB_Downloader
           uses: robinraju/release-downloader@v1
           with:
                 repository: 'bepass-org/oblivion'
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
-      -  name: send created sub
+      -  name: send oblivion
          uses: appleboy/telegram-action@master
          with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: سرورهای رایگان جمع آوری شده
+          message: به روز ترین نسخه oblivion
           document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/oblivion-v6-signed.apk
+ -   name: HI_Downloader
+          uses: robinraju/release-downloader@v1
+          with:
+                repository: 'hiddify/hiddify-next'
+                latest: true
+                fileName: '*'
+                out-file-path: 'downloaded'
+      -  name: send hiddify
+         uses: appleboy/telegram-action@master
+         with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: به روزترین نسخه‌های هیدیفای
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Android-arm64.apk
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Android-arm7.apk
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Android-x86_64.apk
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Linux-x64.AppImage
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Portable-x64.zip
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Setup-x64.exe
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Setup-x64.msix
+ -   name: Mahsa_Downloader
+          uses: robinraju/release-downloader@v1
+          with:
+                repository: 'GFW-knocker/MahsaNG'
+                latest: true
+                fileName: '*'
+                out-file-path: 'downloaded'
+      -  name: send Mahsa
+         uses: appleboy/telegram-action@master
+         with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: به روزترین نسخه‌های مهسا ان جی
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_arm64-v8a.apk
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_armeabi-v7a.apk
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_x86.apk
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/MahsaNG_9.5_x86_64.apk
 
