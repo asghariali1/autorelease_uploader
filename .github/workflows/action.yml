@@ -10,7 +10,7 @@ jobs:
       -   name: Downloader
           uses: robinraju/release-downloader@v1
           with:
-                repository: 'bepass-org/oblivion-desktop'
+                repository: 'bepass-org/oblivion'
                 latest: true
                 fileName: '*'
                 out-file-path: 'downloaded'
@@ -20,4 +20,5 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: سرورهای رایگان جمع آوری شده
-          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/oblivion-desktop-linux-arm64.tar.xz
+          document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/oblivion-v6-signed.apk
+
