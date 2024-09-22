@@ -46,7 +46,7 @@ jobs:
           document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Portable-x64.zip
           document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Setup-x64.exe
           document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/Hiddify-Windows-Setup-x64.msix
- -   name: Mahsa_Downloader
+     -   name: Mahsa_Downloader
           uses: robinraju/release-downloader@v1
           with:
                 repository: 'GFW-knocker/MahsaNG'
