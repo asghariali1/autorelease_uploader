@@ -1,3 +1,10 @@
-- name: release-downloader
-uses: robinraju/release-downloader@v1.11
+- uses: robinraju/release-downloader@v1
+  with:
+    # The source repository path.
+    # Expected format {owner}/{repo}
+    # Default: ${{ github.repository }}
+    repository: 'bepass-org/oblivion-desktop/releases'
 
+    # A flag to set the download target as latest release
+    # The default value is 'false'
+    latest: true
