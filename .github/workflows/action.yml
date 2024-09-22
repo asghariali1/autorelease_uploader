@@ -10,8 +10,4 @@ jobs:
                 repository: 'bepass-org/oblivion-desktop'
                 latest: true
                 fileName: '*'
-        -    name: Upload artifact
-             uses: actions/upload-artifact@v1
-             with:
-              name: surefire-reports
-              path: mymeeave/target/surefire-reports/**
+                out-file-path: 'downloaded'
