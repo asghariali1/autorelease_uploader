@@ -26,7 +26,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: به روز ترین نسخه oblivion
           document: /home/runner/work/autorelease_uploader/autorelease_uploader/downloaded/oblivion-v6-signed.apk
- -   name: HI_Downloader
+      -   name: HI_Downloader
           uses: robinraju/release-downloader@v1
           with:
                 repository: 'hiddify/hiddify-next'
