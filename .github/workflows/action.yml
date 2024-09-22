@@ -1,16 +1,15 @@
 name: Deploy Workflow
 on: [push, workflow_dispatch]
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        defaults:
-         run:
-          working-directory: /assets/
-        steps:
-        -   name: Downloader
-            working-directory: ./downloaded
-            uses: robinraju/release-downloader@v1
-            with:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
+    steps:
+      -   name: Downloader
+          uses: robinraju/release-downloader@v1
+          with:
                 repository: 'bepass-org/oblivion-desktop'
                 latest: true
                 fileName: '*'
